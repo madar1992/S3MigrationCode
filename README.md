@@ -39,3 +39,29 @@ The **S3 Migration Code** is a Java-based application designed to efficiently mi
 1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/s3-migration-code.git
+
+Navigate to the project directory:
+bash
+Copy code
+cd s3-migration-code
+Build the project:
+bash
+Copy code
+mvn clean install
+Run the application:
+bash
+Copy code
+java -jar target/s3-migration-code.jar
+API Usage
+Endpoint
+POST /api/s3/copy
+Parameters
+sourceBucket: Name of the source bucket.
+destinationBucket: Name of the destination bucket.
+Example Request
+bash
+Copy code
+curl -X POST "http://localhost:8080/api/s3/copy?sourceBucket=source-bucket-name&destinationBucket=destination-bucket-name"
+Customization
+Update the AWS region in the S3CopyService class to match your source and destination buckets.
+Add filters for specific file types or prefixes if needed.
